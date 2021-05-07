@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: domokai/apache-httpd-beta:v1.0.0
+      - image: larajorge11/apache-httpd-beta:v1.0.0
         imagePullPolicy: Always
         name: myweb
 
