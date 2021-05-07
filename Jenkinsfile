@@ -1,5 +1,4 @@
 pipeline {
-
   environment {
     registry = "larajorge11/apache-httpd-beta"
     registryCredential = 'dockerhub_lara'
@@ -28,7 +27,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "" ) {
+          docker.withRegistry( '', registryCredential  ) {
             dockerImage.push()
           }
         }
