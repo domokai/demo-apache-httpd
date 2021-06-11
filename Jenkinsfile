@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "larajorge11/apache-httpd-beta"
+    registry = "domokai/apache-httpd-beta"
     registryCredential = 'dockerhub_lara'
   }
 
