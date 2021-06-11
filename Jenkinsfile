@@ -34,14 +34,6 @@ pipeline {
       }
     }
 
-    stage('Deploy App') {
-      steps {
-        script {
-          kubernetesDeploy(configs: "domokai.yaml", kubeconfigId: "domokai_jenkins_cluster")
-        }
-      }
-    }
-
   }
 
 }
