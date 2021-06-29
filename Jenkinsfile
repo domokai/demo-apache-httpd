@@ -38,7 +38,7 @@ pipeline {
       steps{
         sh '''
             rm -rf domokai-kubernetes
-            git config --global user.name "Jorge Lara"
+            git config --global user.name "domokai"
             git config --global user.email "larajorge11@gmail.com"
             git clone --single-branch --branch main git@github.com:domokai/domokai-kubernetes.git
             cd domokai-kubernetes/domokai-dev/apache1
