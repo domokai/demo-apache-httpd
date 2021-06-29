@@ -38,9 +38,11 @@ pipeline {
       steps{
         sh '''
             rm -rf domokai-kubernetes
+            mkdir tmp
+            cd tmp
             git config --global user.name "domokai"
             git config --global user.email "larajorge11@gmail.com"
-            git clone --single-branch --branch main git@github.com:domokai/domokai-kubernetes.git
+            git clone git@github.com:domokai/domokai-kubernetes.git
             cd domokai-kubernetes/domokai-dev/apache1
             docker run --rm -v "${PWD}":/workdir mikefarah/yq e '.[0].value = "domokai/apache-httpd-beta:v1.0.0"' --inplace --verbose 'version-patch.yaml'
             cat version-patch.yaml
