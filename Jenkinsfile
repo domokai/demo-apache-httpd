@@ -38,8 +38,6 @@ pipeline {
       steps{
         sh '''
             rm -rf domokai-kubernetes
-            mkdir tmp
-            cd tmp
             git config --global user.name "domokai"
             git config --global user.email "larajorge11@gmail.com"
             git clone git@github.com:domokai/domokai-kubernetes.git
